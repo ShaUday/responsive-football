@@ -6,7 +6,7 @@ body {
 }
 
 p {
-    font-size: .7em;
+    font-size: .8em;
     color: gray;
 }
 
@@ -14,7 +14,11 @@ header {
     width: 100%;
     height: 677px;
     background-color: #2D25A0;
-    background-color: royalblue transition: background-color 1s ease-in;
+}
+
+.dis-1,
+.dis-0 {
+    display: none;
 }
 
 header:hover {
@@ -82,7 +86,7 @@ main {
 
 .player {
     width: 330px;
-    height: 426px;
+    height: 450px;
     box-shadow: 5px 5px 10px grey;
     padding: 15px;
 }
@@ -143,4 +147,68 @@ main {
     padding: 10px;
     border-radius: 25%;
     margin-left: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .head-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .dis-1 {
+        display: block;
+    }
+
+    .menu-bar ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-bar {
+        display: none;
+    }
+
+    input:checked~.menu-bar {
+        display: block;
+    }
+
+    .head-title {
+        margin-top: 20px;
+        width: 278px;
+        height: 138px;
+        font-size: 19px;
+        margin-left: 20px;
+
+    }
+
+    .head-image img {
+        width: 329px;
+        height: 259.17px;
+        margin-left: 20px;
+    }
+
+    .players {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .blogs {
+        flex-direction: column;
+    }
+
+    .blog-title {
+        margin-left: 50px;
+    }
+
+    .blog-image img {
+        width: 99%;
+    }
+
+}
+
+@media only screen and (min-width:601px) and (max-width:992px) {
+    .players {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
