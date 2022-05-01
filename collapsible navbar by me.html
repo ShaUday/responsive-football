@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <style>
+        .menu ul {
+            list-style: none;
+            font-weight: bold;
+        }
+
+        .menu a {
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+        }
+
+        .container {
+
+            width: 100%;
+            background-color: whitesmoke;
+            box-shadow: 10px 5px 10px gray;
+            border-bottom: 3px solid midnightblue;
+        }
+
+        .container label {
+            font-size: 26px;
+            display: block;
+            padding-left: 35px;
+            background-image: url(menu.png);
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: 10px;
+        }
+
+        #menu {
+            display: none;
+        }
+
+        input:checked+label {
+            background-image: url(close.png);
+        }
+
+        .menu {
+            display: none;
+        }
+
+        input:checked~.menu {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="checkbox" name="" id="menu">
+        <label for="menu">Menu</label>
+        <div class="menu">
+            <ul>
+                <li><a href=""></a>Home</li>
+                <li><a href=""></a>Des</li>
+                <li><a href=""></a>Pas</li>
+                <li><a href=""></a>Buy</li>
+                <li><a href=""></a>Contacts</li>
+                <li><a href=""></a>Ends</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
